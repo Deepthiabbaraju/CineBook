@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\mta\\OnlineMovieTicketingApplication\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E4B6047A-24CF-498C-9C9C-C5E3087C741D}|OnlineMovieTicketingApplication\\OnlineMovieTicketingApplication.csproj|d:\\mta\\onlinemovieticketingapplication\\onlinemovieticketingapplication\\models\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4B6047A-24CF-498C-9C9C-C5E3087C741D}|OnlineMovieTicketingApplication\\OnlineMovieTicketingApplication.csproj|solutionrelative:onlinemovieticketingapplication\\models\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4B6047A-24CF-498C-9C9C-C5E3087C741D}|OnlineMovieTicketingApplication\\OnlineMovieTicketingApplication.csproj|d:\\mta\\onlinemovieticketingapplication\\onlinemovieticketingapplication\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4B6047A-24CF-498C-9C9C-C5E3087C741D}|OnlineMovieTicketingApplication\\OnlineMovieTicketingApplication.csproj|solutionrelative:onlinemovieticketingapplication\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4B6047A-24CF-498C-9C9C-C5E3087C741D}|OnlineMovieTicketingApplication\\OnlineMovieTicketingApplication.csproj|d:\\mta\\onlinemovieticketingapplication\\onlinemovieticketingapplication\\controllers\\seatscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4B6047A-24CF-498C-9C9C-C5E3087C741D}|OnlineMovieTicketingApplication\\OnlineMovieTicketingApplication.csproj|solutionrelative:onlinemovieticketingapplication\\controllers\\seatscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "JWTsettings.cs",
+              "DocumentMoniker": "D:\\mta\\OnlineMovieTicketingApplication\\OnlineMovieTicketingApplication\\Models\\JWTsettings.cs",
+              "RelativeDocumentMoniker": "OnlineMovieTicketingApplication\\Models\\JWTsettings.cs",
+              "ToolTip": "D:\\mta\\OnlineMovieTicketingApplication\\OnlineMovieTicketingApplication\\Models\\JWTsettings.cs",
+              "RelativeToolTip": "OnlineMovieTicketingApplication\\Models\\JWTsettings.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T16:03:08.72Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\mta\\OnlineMovieTicketingApplication\\OnlineMovieTicketingApplication\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "OnlineMovieTicketingApplication\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\mta\\OnlineMovieTicketingApplication\\OnlineMovieTicketingApplication\\Controllers\\UserController.cs",
+              "RelativeToolTip": "OnlineMovieTicketingApplication\\Controllers\\UserController.cs",
+              "ViewState": "AQIAAHUAAAAAAAAAAAAowDgAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T16:02:42.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SeatsController.cs",
+              "DocumentMoniker": "D:\\mta\\OnlineMovieTicketingApplication\\OnlineMovieTicketingApplication\\Controllers\\SeatsController.cs",
+              "RelativeDocumentMoniker": "OnlineMovieTicketingApplication\\Controllers\\SeatsController.cs",
+              "ToolTip": "D:\\mta\\OnlineMovieTicketingApplication\\OnlineMovieTicketingApplication\\Controllers\\SeatsController.cs",
+              "RelativeToolTip": "OnlineMovieTicketingApplication\\Controllers\\SeatsController.cs",
+              "ViewState": "AQIAAFMAAAAAAAAAAAAswAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T16:02:32.096Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
