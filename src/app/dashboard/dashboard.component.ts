@@ -1,7 +1,7 @@
 import { Component,OnInit} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { CommonModule ,Location} from '@angular/common';
+import { CommonModule} from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 export interface Movie {
@@ -32,7 +32,7 @@ export class DashboardComponent implements OnInit{
   userId?:string;
   authToken?:string;
   msg?:string;
-  constructor(private http: HttpClient, private router: Router,private location:Location) { }
+  constructor(private http: HttpClient, private router: Router) { }
   
   ngOnInit(): void {
 
@@ -153,8 +153,5 @@ export class DashboardComponent implements OnInit{
     localStorage.removeItem('newLocation')
     this.router.navigate(['/signup']);
   }
-  goBack(): void {
-    this.location.back(); 
-  }
-
+  
 }
