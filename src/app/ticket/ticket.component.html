@@ -1,0 +1,14 @@
+<header>
+    <h1>Your Ticket</h1>
+  </header>
+  <main>
+    <div *ngIf="ticketInfo" class="ticketInfo">
+      <h2>{{ ticketInfo.movieTitle }}</h2>
+      <p>Theatre: {{ ticketInfo.theatreName }}</p>
+      <p>Date: {{ formattedDate }}</p>
+      <p>Time: {{ formattedTime }}</p>
+      <p>Seats: {{ ticketInfo.seats.join(', ') }}</p>
+      <h3>Enjoy the Movie!</h3>
+    </div>
+    <button (click)="returnToDashboard()" class="return-button">Return to Home</button>
+  </main>

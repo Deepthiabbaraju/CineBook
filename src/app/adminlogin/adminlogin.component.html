@@ -1,0 +1,16 @@
+<header>
+    <h1>Admin Login</h1>
+  </header>
+  <main>
+    <section id="admin-login">
+      <h2>Login</h2>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <label for="admin-username">Username:</label>
+        <input formControlName="username" type="text" id="admin-username" required>
+        <label for="admin-password">Password:</label>
+        <input formControlName="password" type="password" id="admin-password" required>
+        <button type="submit">Login</button>
+      </form>
+      <p id="login-error" *ngIf="loginError" style="color: red;">{{ loginError }}</p>
+    </section>
+  </main>

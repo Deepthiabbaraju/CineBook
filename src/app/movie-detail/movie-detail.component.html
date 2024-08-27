@@ -1,0 +1,17 @@
+
+<header>
+    <h1>Book Your Tickets Now!</h1>
+</header>
+<main>
+    <section class="movie-detail">
+        <img [src]="moviePoster" alt="Movie Poster" class="movie-poster">
+        <div class="movie-info">
+            <h2>{{ movieTitle }}</h2>
+            <p class="genre">{{ genre }}</p>
+            <p class="language">{{ language }}</p>
+            <p class="duration">{{ duration }}</p>
+            <p class="releasedate">{{ releaseDate }}</p>
+            <button class="book-button" (click)="showTheatres()">Book tickets</button>
+        </div>
+    </section>
+</main>

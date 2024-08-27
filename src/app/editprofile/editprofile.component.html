@@ -1,0 +1,20 @@
+<div class="container">
+    <h1>Edit Profile</h1>
+    <form [formGroup]="editProfileForm">
+      <label for="edit-email">Email:</label>
+      <input type="email" formControlName="email" required>
+      <label for="current-password">Current Password:</label>
+        <input type="password" id="current-password" formControlName="currentPassword" required>
+      <label for="edit-password">New Password:</label>
+      <input type="password" formControlName="password" required>
+      <label for="edit-location">Location:</label>
+      <input type="text" formControlName="location" required>
+      <label for="edit-preferredLanguage">Preferred Language:</label>
+      <input type="text" formControlName="preferredLanguage" required>
+      <div class="button-container">
+        <button type="submit" [disabled]="!editProfileForm.valid" class="save-button"(click)="onSubmit()">Save Changes</button>
+        <button type="button" (click)="cancelEdit()" class="cancel-button">Cancel</button>
+      </div>
+    </form>
+    <div *ngIf="message" class="message">{{ message }}</div>
+  </div>

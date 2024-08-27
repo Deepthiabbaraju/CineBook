@@ -1,0 +1,54 @@
+<header>
+    <h1>Select Your Seats for {{ movieTitle }}</h1>
+  </header>
+  <main>
+    <div class="seat-status-indicators">
+      <div class="indicator">
+        <div class="indicator-box selected"></div>
+        <span class="indicator-label">Selected</span>
+      </div>
+      <div class="indicator">
+        <div class="indicator-box reserved"></div>
+        <span class="indicator-label">Reserved</span>
+      </div>
+      <div class="indicator">
+        <div class="indicator-box available"></div>
+        <span class="indicator-label">Available</span>
+      </div>
+    </div>
+    <div *ngIf="showSeatSelectionModal" class="modal-overlay">
+      <div class="modal">
+        <h2>Select Number of Seats</h2>
+        <input type="number" [(ngModel)]="numberOfSeats" min="1" />
+        <button (click)="confirmSelection()">Confirm</button>
+      </div>
+    </div>
+    
+  
+    <table id="seat-layout">
+      <tbody>
+        <tr *ngFor="let row of seats; let rowIndex = index">
+          <ng-container *ngFor="let seat of row; let seatIndex = index">
+            <td *ngIf="seatIndex > 0 && seatIndex ==3 || seatIndex ==13" class="aisle"></td>
+            <td [id]="seat.id"
+                [ngClass]="{
+                  'seat': true,
+                  'available': seat.status === 'available',
+                  'selected': seat.status === 'selected',
+                  'reserved': seat.status === 'reserved'
+                }"
+                (click)="toggleSeatSelection(seat)">
+              {{ seat.id }}
+            </td>
+          </ng-container>
+        </tr>
+      </tbody>
+    </table>
+  
+    <div class="screen-icon">
+      <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCg0KPCEtLSBVcGxvYWRlZCB0bzogU1ZHIFJlcG8sIHd3dy5zdmdyZXBvLmNvbSwgR2VuZXJhdG9yOiBTVkcgUmVwbyBNaXhlciBUb29scyAtLT4KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJJY29ucyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgDQoJIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoyO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9DQo8L3N0eWxlPg0KPHBhdGggY2xhc3M9InN0MCIgZD0iTTMxLDI2TDMxLDI2Yy05LjgtMi42LTIwLjItMi42LTMwLDBsMCwwIi8+DQo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMSw2TDEsNmM5LjgsMi42LDIwLjIsMi42LDMwLDBsMCwwIi8+DQo8bGluZSBjbGFzcz0ic3QwIiB4MT0iMyIgeTE9IjEzIiB4Mj0iMyIgeTI9IjE5Ii8+DQo8cG9seWxpbmUgY2xhc3M9InN0MCIgcG9pbnRzPSI2LDE5IDYsMTMgOSwxNiAxMiwxMyAxMiwxOSAiLz4NCjxwb2x5bGluZSBjbGFzcz0ic3QwIiBwb2ludHM9IjE1LDE5IDE4LDEzIDIxLDE5ICIvPg0KPGxpbmUgY2xhc3M9InN0MCIgeDE9IjI0IiB5MT0iMTMiIHgyPSIyOSIgeTI9IjE5Ii8+DQo8bGluZSBjbGFzcz0ic3QwIiB4MT0iMjkiIHkxPSIxMyIgeDI9IjI0IiB5Mj0iMTkiLz4NCjxsaW5lIGNsYXNzPSJzdDAiIHgxPSIxOCIgeTE9IjE4IiB4Mj0iMjAiIHkyPSIxOCIvPg0KPC9zdmc+" alt="Theater Screen">
+    </div>
+    <h5 id="attention-text">Attention over here, please</h5>
+  
+    <button id="proceed-button" [ngClass]="{ 'enabled': selectedSeats.length > 0 }" (click)="proceed()">Proceed</button>
+  </main>

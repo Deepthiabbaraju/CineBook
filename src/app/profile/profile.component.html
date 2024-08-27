@@ -1,0 +1,9 @@
+<div class="container">
+    <h1>User Profile</h1>
+    <div id="profile-info">
+      <p><strong>Email:</strong> {{ userData?.userName }}</p>
+      <p><strong>Location:</strong> {{ userData?.location }}</p>
+      <p><strong>Preferred Language:</strong> {{ userData?.preferredLanguage }}</p>
+    </div>
+    <button id="edit-profile-btn" (click)="editProfile()">Edit Profile</button>
+  </div>

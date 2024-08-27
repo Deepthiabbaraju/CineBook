@@ -1,0 +1,25 @@
+<header>
+    <h1 id="movie-title">{{ movieTitle }}</h1>
+  </header>
+  <main>
+    <section class="date-selection">
+      <h2>Select Date:</h2>
+      <div class="date-options" id="date-options">
+        <div *ngFor="let date of dates" class="date-option" [class.selected]="date === selectedDate" (click)="selectDate(date)">
+          {{ date | date: 'yyyy-MM-dd' }}
+        </div>
+      </div>
+    </section>
+    <section class="theatre-selection" id="theatre-selection">
+      <h2>Theatres:</h2>
+      <div *ngFor="let theatre of theatres" class="theatre-box">
+        <div class="theatre-header">
+        <h3>{{ theatre.theatreName }}</h3></div>
+        <div class="showtimes">
+          <button *ngFor="let showtime of theatre.showTimes" class="showtime" [attr.data-showtime]="showtime.showTime" (click)="selectShowtime(theatre, showtime)">
+            {{ formatTime(showtime.showTime )}}
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>

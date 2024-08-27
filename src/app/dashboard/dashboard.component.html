@@ -1,0 +1,52 @@
+<header>
+    <h1>Welcome to CineBook</h1>
+    <nav>
+        <div class="search-bar">
+            <input type="text" id="search-movies" placeholder="Search movies..." [(ngModel)]="searchQuery">
+            <button id="search-movies-button" (click)="searchMovies()">Search</button>
+        </div>
+        <div class="nav-buttons">
+            <button id="change-location-button" (click)="locationModal()">Change Location</button>
+            <a id="profile-link" (click)="profile()">Profile</a>
+            <a id="logout-link" (click)="logout()">Logout</a>
+        </div>
+    </nav>
+</header>
+<main>
+  <div *ngIf="msg" class="alert">
+    <h3>{{ msg }}</h3>
+</div>
+<div *ngIf="!msg">
+    <section id="movies">
+      <h2>Available Movies</h2>
+      <div id="movieList">
+        <div *ngFor="let movie of movies" class="movie-item">
+          <a [routerLink]="['/movie', movie.id]" id="movie-link" >
+          <img [src]="movie.imageUrl" alt="{{ movie.title }}">
+          <h3>{{ movie.title }}</h3>
+          <div class="movie-details">
+    
+          </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+    
+</main>
+
+<div id="location-modal" class="modal" *ngIf="locationModalOpen">
+  <div class="modal-content">
+    <span class="close" (click)="closeLocationModal()">&times;</span>
+    <h2>Choose Your Location</h2>
+    <input type="text" id="new-location" [(ngModel)]="newLocation">
+    <button id="submit-location-button" (click)="submitLocation()">Submit</button>
+    <div id="popular-cities">
+      <h3>Popular Cities</h3>
+      <ul id="popular-cities-list">
+        <li *ngFor="let city of popularCities" (click)="selectCity(city)">{{ city }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+

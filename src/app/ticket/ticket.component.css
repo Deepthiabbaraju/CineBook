@@ -1,0 +1,64 @@
+/* General styles for the ticket page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Header styling */
+  header {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  /* Main content styling */
+  main {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 20px;
+  }
+  
+  /* Ticket information box styling */
+  .ticketInfo {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px; /* Space between the box and the button */
+  }
+  
+  .ticketInfo h2 {
+    margin-top: 0;
+    color: #2c3e50;
+  }
+  
+  .ticketInfo p {
+    margin: 10px 0;
+    color: #34495e;
+  }
+  
+  /* Button styling */
+  .return-button {
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    text-decoration: none;
+  }
+  
+  .return-button:hover {
+    background-color: #2980b9;
+  }
+  
